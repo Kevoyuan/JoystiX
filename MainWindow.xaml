@@ -1,0 +1,106 @@
+﻿<Window x:Class="JoystiX.MainWindow"
+        xmlns:local="clr-namespace:JoystiX"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Xbox Controller to Keyboard Mapper" Height="600" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="2*" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="1*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <!-- Controller Status -->
+        <StackPanel Grid.Row="0" Grid.ColumnSpan="4" HorizontalAlignment="Center">
+            <TextBlock x:Name="ConnectionStatus" 
+                       Text="Controller Status: Not Connected" 
+                       Margin="10" 
+                       FontWeight="Bold" />
+            <TextBlock x:Name="BatteryStatus" 
+                       Text="Battery Status: Unknown" 
+                       Margin="10" 
+                       FontWeight="Bold" />
+        </StackPanel>
+
+        <!-- Left Controls -->
+        <Label x:Name="LBButton" Content="LB" Width="30" Height="30" BorderBrush="Black" BorderThickness="1" 
+               HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.Row="1" Grid.Column="0" Margin="10"/>
+        <StackPanel Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center">
+            <TextBlock Text="Left Stick" FontWeight="Bold" Margin="10" />
+            <Canvas x:Name="LeftStickCanvas" Width="100" Height="100" Background="LightGray">
+                <Ellipse x:Name="LeftStickIndicator" Width="10" Height="10" Fill="Green" />
+                <Ellipse Width="100" Height="100" Stroke="Black" StrokeThickness="1" />
+            </Canvas>
+            <TextBlock x:Name="LeftStickXLabel" Text="X = 0.000000" />
+            <TextBlock x:Name="LeftStickYLabel" Text="Y = 0.000000" />
+            <TextBlock Text="Left Trigger" FontWeight="Bold" Margin="10" />
+            <ProgressBar x:Name="LeftTriggerBar" Minimum="0" Maximum="100" Width="100" Height="20" />
+        </StackPanel>
+
+        <!-- Right Controls -->
+        <Label x:Name="RBButton" Content="RB" Width="30" Height="30" BorderBrush="Black" BorderThickness="1" 
+               HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.Row="1" Grid.Column="2" Margin="10"/>
+        <StackPanel Grid.Column="3" Grid.Row="1" HorizontalAlignment="Center">
+            <TextBlock Text="Right Stick" FontWeight="Bold" Margin="10" />
+            <Canvas x:Name="RightStickCanvas" Width="100" Height="100" Background="LightGray">
+                <Ellipse x:Name="RightStickIndicator" Width="10" Height="10" Fill="Green" />
+                <Ellipse Width="100" Height="100" Stroke="Black" StrokeThickness="1" />
+            </Canvas>
+            <TextBlock x:Name="RightStickXLabel" Text="X = 0.000000" />
+            <TextBlock x:Name="RightStickYLabel" Text="Y = 0.000000" />
+            <TextBlock Text="Right Trigger" FontWeight="Bold" Margin="10" />
+            <ProgressBar x:Name="RightTriggerBar" Minimum="0" Maximum="100" Width="100" Height="20" />
+        </StackPanel>
+
+        <!-- Button Indicators -->
+        <Grid Grid.ColumnSpan="4" Grid.Row="2" HorizontalAlignment="Center" Margin="10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <!-- ABXY Buttons -->
+            <Label x:Name="YButton" Content="Y" Width="30" Height="30" BorderBrush="Black" BorderThickness="1" 
+                   HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.Row="0" Grid.Column="5" Margin="10"/>
+            <Label x:Name="XButton" Content="X" Width="30" Height="30" BorderBrush="Black" BorderThickness="1" 
+                   HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.Row="1" Grid.Column="4" Margin="10"/>
+            <Label x:Name="AButton" Content="A" Width="30" Height="30" BorderBrush="Black" BorderThickness="1" 
+                   HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.Row="2" Grid.Column="5" Margin="10"/>
+            <Label x:Name="BButton" Content="B" Width="30" Height="30" BorderBrush="Black" BorderThickness="1" 
+                   HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.Row="1" Grid.Column="6" Margin="10"/>
+
+            <!-- DPad Buttons -->
+            <Label x:Name="DPadUp" Content="DPad Up" Width="60" Height="30" BorderBrush="Black" BorderThickness="1" 
+                   HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.Row="0" Grid.Column="1" Margin="10"/>
+            <Label x:Name="DPadLeft" Content="DPad Left" Width="60" Height="30" BorderBrush="Black" BorderThickness="1" 
+                   HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.Row="1" Grid.Column="0" Margin="10"/>
+            <Label x:Name="DPadRight" Content="DPad Right" Width="60" Height="30" BorderBrush="Black" BorderThickness="1" 
+                   HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.Row="1" Grid.Column="2" Margin="10"/>
+            <Label x:Name="DPadDown" Content="DPad Down" Width="60" Height="30" BorderBrush="Black" BorderThickness="1" 
+                   HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.Row="2" Grid.Column="1" Margin="10"/>
+
+            <!-- Start and Back Buttons -->
+            <Label x:Name="StartButton" Content="Start" Width="60" Height="30" BorderBrush="Black" BorderThickness="1" 
+                   HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.Row="0" Grid.Column="3" Margin="10"/>
+            <Label x:Name="BackButton" Content="Back" Width="60" Height="30" BorderBrush="Black" BorderThickness="1" 
+                   HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.Row="2" Grid.Column="3" Margin="10"/>
+        </Grid>
+    </Grid>
+</Window>
