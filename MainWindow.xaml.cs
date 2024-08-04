@@ -76,8 +76,8 @@ namespace XboxControllerTester
             double normalizedX = x / 32767.0;
             double normalizedY = y / 32767.0;
 
-            Canvas.SetLeft(indicator, 90 + normalizedX * 90);
-            Canvas.SetTop(indicator, 90 - normalizedY * 90);
+            Canvas.SetLeft(indicator, 65 + normalizedX * 65);
+            Canvas.SetTop(indicator, 65 - normalizedY * 65);
 
             xText.Text = $"X: {normalizedX:P0}";
             yText.Text = $"Y: {normalizedY:P0}";

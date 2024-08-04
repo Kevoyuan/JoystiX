@@ -25,16 +25,16 @@
 
         <!-- Left Stick -->
         <Canvas Grid.Column="0" Grid.Row="2" Width="200" Height="200" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,0,0,60">
-            <Ellipse Width="200" Height="200" Stroke="White" StrokeThickness="2"/>
-            <Ellipse x:Name="LeftStickIndicator" Width="20" Height="20" Fill="White" Canvas.Left="90" Canvas.Top="90"/>
+            <Ellipse Width="150" Height="150" Stroke="White" StrokeThickness="2"/>
+            <Ellipse x:Name="LeftStickIndicator" Width="20" Height="20" Fill="White" Canvas.Left="65" Canvas.Top="65"/>
             <TextBlock x:Name="LeftStickXText" Text="X: -1%" Foreground="White" Canvas.Left="80" Canvas.Top="210"/>
             <TextBlock x:Name="LeftStickYText" Text="Y: 2%" Foreground="White" Canvas.Left="80" Canvas.Top="230"/>
         </Canvas>
 
         <!-- Right Stick -->
         <Canvas Grid.Column="2" Grid.Row="2" Width="200" Height="200" VerticalAlignment="Top" HorizontalAlignment="Center">
-            <Ellipse Width="200" Height="200" Stroke="White" StrokeThickness="2"/>
-            <Ellipse x:Name="RightStickIndicator" Width="20" Height="20" Fill="White" Canvas.Left="90" Canvas.Top="90"/>
+            <Ellipse Width="150" Height="150" Stroke="White" StrokeThickness="2"/>
+            <Ellipse x:Name="RightStickIndicator" Width="20" Height="20" Fill="White" Canvas.Left="65" Canvas.Top="65"/>
             <TextBlock x:Name="RightStickXText" Text="X: -2%" Foreground="White" Canvas.Left="80" Canvas.Top="210"/>
             <TextBlock x:Name="RightStickYText" Text="Y: 2%" Foreground="White" Canvas.Left="80" Canvas.Top="230"/>
         </Canvas>
