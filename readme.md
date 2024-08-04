@@ -6,7 +6,7 @@ This project is an Xbox controller tester application built using C#. It allows 
 
 <div style="display: flex; align-items: center; justify-content: center; height: 40vh;">
   <img src="file.png" alt="Alt Text" width="300" style="margin-right: 10px;"/>
-  <img src="x.png" alt="Alt Text" width="300" style="margin-left: 10px;"/>
+  <img src="x.png" alt="Alt Text" width="300" style="margin-left: 10px; margin-bottom: 25px"/>
 </div>
 
 
